@@ -1,0 +1,17 @@
+<section class="container">
+  <ng-container *ngFor="let movie of movies">
+    <mat-card class="card" [style.background]="'url(' + BASE_IMG_URL+ movie.poster_path+')'">
+
+
+      <mat-card-actions class="actions">
+        <button mat-fab color="basic" aria-label="Example icon button with a heart icon" (click)="toggleFavorite()">
+          <mat-icon [ngClass]="{ 'favorite': isFavorite, 'bounce': isBouncing}">
+            favorite</mat-icon>
+        </button>
+        <button mat-raised-button color="basic">SHARE</button>
+      </mat-card-actions>
+
+
+    </mat-card>
+  </ng-container>
+</section>

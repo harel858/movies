@@ -1,0 +1,18 @@
+<div class="container">
+  <form [formGroup]="form" (submit)="signIn()" class="example-form">
+    <h1>Welcome Back</h1>
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter Email: </mat-label>
+      <input formControlName="email" matInput placeholder="Email">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter Password: </mat-label>
+      <input formControlName="password" matInput placeholder="Password">
+    </mat-form-field>
+    <p class="error">{{error}}</p>
+    <ng-container *ngIf="loading">
+      <mat-spinner strokeWidth="3" [diameter]="40"></mat-spinner>
+    </ng-container>
+    <button color="basic" mat-raised-button>Sign In</button>
+  </form>
+</div>

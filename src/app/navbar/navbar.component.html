@@ -1,0 +1,23 @@
+  <mat-toolbar scroll class="container">
+
+    <div class="links">
+      <span class="brand">
+        RL Cinema
+        <mat-icon aria-hidden="false" class="icon" aria-label="Example home icon" fontIcon="movie"></mat-icon>
+      </span>
+      <div class="spacer">
+        <a mat-button routerLink="/home">Home</a>
+        <a mat-button routerLink="/about">About</a>
+        <a mat-button routerLink="/media">Media</a>
+        <a mat-button routerLink="/contact">Contact</a>
+      </div>
+    </div>
+    <button class="moreVert" mat-icon-button [matMenuTriggerFor]="menu"
+      aria-label="Example icon button with a vertical three dot icon">
+      <mat-icon fontIcon="supervisor_account">more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a routerLink="/signIn"><button mat-menu-item>Sign In</button></a>
+      <a><button (click)="logOut()" mat-menu-item>Sign Out</button></a>
+    </mat-menu>
+  </mat-toolbar>

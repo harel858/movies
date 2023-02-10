@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "rl-movies-5ad48"
+  },
+  "targets": {
+    "rl-movies-5ad48": {
+      "hosting": {
+        "movies": [
+          "rl-movies-5ad48"
+        ]
+      }
+    }
+  }
+}
